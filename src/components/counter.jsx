@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = { 
-        count: 1,
-       
+        count: 0,    
     };
+
     render() { 
-        React.createElement('div')
+        // React.createElement('div')
         return (
         <div>
-            <spam>{this.state.count}</spam>
+            <span>{this.formatCount()}</span>
             <button>Increment</button>
         </div>
         );
     }
+
+
+    formatCount() {
+    const { count } = this.state;
+    return count === 0 ? "zero": count;
+    }
 }
- 
+
 export default Counter;
+
