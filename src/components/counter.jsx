@@ -12,8 +12,8 @@ class Counter extends Component {
         fontWeight : 'bold'
     }
 
-    handleIncrement(){
-        console.log('Increment Clicked');
+    handleIncrement = () => {
+        console.log('Increment Clicked', this);
     }
     renderTags () {
         if (this.state.tags.length === 0) return <p>There are no tags</p>
